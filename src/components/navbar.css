@@ -1,9 +1,10 @@
+/* Default styling for larger screens */
 .navbar {
   display: flex;
-  justify-content: space-between; /* This will push the items to opposite sides */
+  justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: #006666; /* Replace with your preferred background color */
+  background-color: #006666;
 }
 
 .links {
@@ -13,7 +14,7 @@
 
 a {
   text-decoration: none;
-  color: rgb(255, 255, 255);
+  color: #ffffff;
   margin-left: 20px;
   font-size: 25px;
 }
@@ -21,4 +22,71 @@ a {
 .logo {
   font-size: 25px;
   color: #ffffff;
+}
+
+/* Hamburger Menu (hidden on larger screens) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+  border-radius: 2px;
+}
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+  }
+
+  .logo {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  /* Hide the links initially and show the hamburger menu */
+  .links {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%; /* Ensures the links take up full width */
+  }
+
+  .hamburger {
+    display: flex; /* Show the hamburger menu on mobile view */
+  }
+
+  /* Adjust links when shown */
+  a {
+    font-size: 20px;
+    margin: 10px 0;
+  }
+
+  /* Show the links when navbar has the 'open' class */
+  .navbar.open .links {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
+  a {
+    font-size: 18px;
+    margin: 8px 0;
+  }
 }

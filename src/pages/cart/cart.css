@@ -1,43 +1,94 @@
+/* Default styling for larger screens */
 .cart {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cartItem {
+  width: 700px;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 25px;
+  margin: 30px;
+}
+
+.cartItem img {
+  width: 200px;
+}
+
+.cartItem .description {
+  width: 100%;
+  font-size: 30px;
+}
+
+.countHandler input {
+  width: 40px;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.checkout button {
+  width: 150px;
+  height: 50px;
+  background-color: rgb(19, 19, 19);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
   .cartItem {
-    width: 700px;
-    height: 250px;
-    display: flex;
-  
-    align-items: center;
-    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
-    border-radius: 25px;
-    margin: 30px;
+    width: 90%; /* Make it adapt to screen width */
+    height: auto;
+    flex-direction: column; /* Stack items vertically */
+    padding: 20px;
   }
-  
+
   .cartItem img {
-    width: 200px;
+    width: 150px; /* Reduce image size */
+    margin-bottom: 15px;
   }
-  
+
   .cartItem .description {
-    width: 100%;
-    font-size: 30px;
-  }
-  
-  .countHandler input {
-    width: 40px;
-    text-align: center;
-    font-weight: bolder;
+    font-size: 24px;
   }
   
   .checkout button {
-    width: 150px;
-    height: 50px;
-    background-color: rgb(19, 19, 19);
-    color: white;
-    border: none;
-    border-radius: 8px;
-    margin: 10px;
-    cursor: pointer;
+    width: 120px;
+    height: 45px;
+    font-size: 14px;
   }
+}
+
+@media (max-width: 480px) {
+  .cartItem {
+    width: 100%; /* Take full width on very small screens */
+    margin: 20px 0;
+  }
+
+  .cartItem img {
+    width: 120px; /* Further reduce image size */
+  }
+
+  .cartItem .description {
+    font-size: 20px;
+  }
+
+  .countHandler input {
+    width: 30px;
+    font-size: 16px;
+  }
+
+  .checkout button {
+    width: 100px;
+    height: 40px;
+    font-size: 12px;
+  }
+}

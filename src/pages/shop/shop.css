@@ -1,53 +1,97 @@
+/* Default styling for larger screens */
 .shopTitle {
-    margin-top: 100px;
-    text-align: center;
-    font-size: 40px;
+  margin-top: 100px;
+  text-align: center;
+  font-size: 40px;
+}
+
+.products {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center;
+}
+
+.product {
+  border-radius: 15px;
+  width: 200px;
+  height: 350px;
+  margin: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.product img {
+  width: 400px;
+}
+
+.product .description {
+  text-align: center;
+}
+
+.product:hover {
+  transition: 0.3s ease-in;
+  cursor: pointer;
+}
+
+.addToCartBttn {
+  background-color: transparent;
+  border: 2px solid rgb(19, 19, 19);
+  min-width: 100px;
+  padding: 5px 10px;
+  border-radius: 15px;
+}
+
+.addToCartBttn:hover {
+  background-color: rgb(19, 19, 19);
+  color: white;
+  cursor: pointer;
+}
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+  .shopTitle {
+    font-size: 28px;
+    margin-top: 50px;
   }
+
   .products {
-    width: 100%;
-    height: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    place-items: center;
+    grid-template-columns: 1fr 1fr; /* 2 columns on medium screens */
   }
-  
+
   .product {
-    border-radius: 15px;
-    width: 200px;
-    height: 350px;
-    margin: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    width: 150px;
+    height: 300px;
+    margin: 50px;
   }
-  
+
   .product img {
-    width: 400px;
+    width: 100%; /* Fit image within product container */
+    height: auto;
   }
-  
-  .product .description {
-    text-align: center;
+}
+
+@media (max-width: 480px) {
+  .shopTitle {
+    font-size: 24px;
+    margin-top: 30px;
   }
-  
-  .product:hover {
-    transition: 0.3s ease-in;
-    cursor: pointer;
+
+  .products {
+    grid-template-columns: 1fr; /* 1 column on small screens */
   }
-  
+
+  .product {
+    width: 100%;
+    margin: 30px 0;
+  }
+
   .addToCartBttn {
-    background-color: transparent;
-    border: 2px solid rgb(19, 19, 19);
-    min-width: 100px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    border-radius: 15px;
+    min-width: 80px;
+    padding: 5px 8px;
+    font-size: 14px;
   }
-  
-  .addToCartBttn:hover {
-    background-color: rgb(19, 19, 19);
-    color: white;
-    cursor: pointer;
-  }
+}
