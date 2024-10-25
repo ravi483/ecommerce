@@ -1,0 +1,24 @@
+.navbar {
+  display: flex;
+  justify-content: space-between; /* This will push the items to opposite sides */
+  align-items: center;
+  padding: 20px;
+  background-color: #006666; /* Replace with your preferred background color */
+}
+
+.links {
+  display: flex;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  margin-left: 20px;
+  font-size: 25px;
+}
+
+.logo {
+  font-size: 25px;
+  color: #ffffff;
+}
